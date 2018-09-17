@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Project</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css"></link>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <main>
+        <v-container fluid>
+          <page></page>
+        </v-container>
+      </main>
+      <v-footer :fixed="fixed">
+        <span><a href="http://www.flowt.io">www.flowt.io</a></span>
+      </v-footer>
+    </v-app>
+  </div>
+<div></div>
+  <script type="text/x-template" id="page">
+    <v-layout column align-center>
+      <div>
+<h1>Hello Chris</h1>
+      </div>
+      <v-card>
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">This is a cool site!</h3>
+            <div>It's even cooler because it's hosted & deployed using Flowt</div>
+            <p><b>Try it out for yourself...</b></p>
+          </div>
+        </v-card-title>
+        <v-card-actions>
+          <v-btn flat class="orange--text" href="http://app.flowt.io">Take me to flowt app</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-layout>
+  </script>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script>
+    Vue.component('page', {
+      template: '#page'
+    })
+    new Vue({
+      el: '#app',
+      data: {
+        clipped: false,
+        drawer: true,
+        fixed: true,
+        items: [
+          { icon: 'bubble_chart', title: 'Inspire' }
+        ],
+        miniVariant: false,
+        right: true,
+        rightDrawer: false,
+        title: 'Flowt Lander'
+      }
+    })
+  </script>
+</body>
+</html>
